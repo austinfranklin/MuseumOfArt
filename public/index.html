@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" >
+	<!--
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="HandheldFriendly" content="true">
+	-->
 	<link rel="stylesheet" href="./style.css">
 	<script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
 
-    
+	<span style='overflow:hidden; white-space: nowrap;'>
+		<form id="text-input">
+			<!-- <label for="fname"></label><br> -->
+			<input type="text" id="input" name="fname" value="Type your response here">
+			<input type="submit" id="submit" value="Submit">
+		</form>
+	</span>
 
-
-
-
-
-
+	<span style='overflow:hidden; white-space: nowrap;' id="twitch-video">
+		<iframe
+		  	src="https://player.twitch.tv/?channel=austinfranklinmusic&parent=https://www.twitch.tv/austinfranklinmusic"
+			frameborder="0"
+			scrolling="no"
+			allowfullscreen="false"
+			height="75%"
+			width="100%">
+		</iframe>
+	</span>
 
 </body>
 </html>
