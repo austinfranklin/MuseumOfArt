@@ -1,11 +1,11 @@
 // Spreadsheet for testing
-// https://docs.google.com/spreadsheets/d/1QMb27FaG5tRfhtqI30SzG8jllXi92dhqa8SbjY_tAOg/pub?output=csv
-// https://docs.google.com/spreadsheets/d/1QMb27FaG5tRfhtqI30SzG8jllXi92dhqa8SbjY_tAOg
+// https://docs.google.com/spreadsheets/d/1dMEF1bC9AuGRLN34wEfA6pBxsRev8cBJyUI-_5ZiDf4/pub?output=csv
+// https://docs.google.com/spreadsheets/d/1dMEF1bC9AuGRLN34wEfA6pBxsRev8cBJyUI-_5ZiDf4
 
 let endorsements;
 
 Papa.parse(
-  "https://docs.google.com/spreadsheets/d/1QMb27FaG5tRfhtqI30SzG8jllXi92dhqa8SbjY_tAOg/pub?output=csv",
+  "https://docs.google.com/spreadsheets/d/1dMEF1bC9AuGRLN34wEfA6pBxsRev8cBJyUI-_5ZiDf4/pub?output=csv",
   {
     download: true,
     header: true,
