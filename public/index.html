@@ -20,14 +20,30 @@
 	</span>
 
 	<span style='overflow:hidden; white-space: nowrap;' id="twitch-video">
+
+		<!-- Add a placeholder for the Twitch embed -->
+		<div id="twitch-embed"></div>
+
+		<!-- Load the Twitch embed script -->
+		<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+		<!-- Create a Twitch.Player object. This will render within the placeholder div -->
+		<script type="text/javascript">
+			new Twitch.Player("twitch-embed", {
+				channel: "austinfranklinmusic"
+		});
+		</script>
+
+		<!--
 		<iframe
-		  	src="https://player.twitch.tv/?channel=austinfranklinmusic&parent=https://www.twitch.tv/austinfranklinmusic"
+		  	src="https://player.twitch.tv/?channel=austinfranklinmusic&parent=https://www.twitch.tv/austinfranklinmusic.com"
 			frameborder="0"
 			scrolling="no"
 			allowfullscreen="false"
 			height="75%"
 			width="100%">
 		</iframe>
+		-->
 	</span>
 
 </body>
