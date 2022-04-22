@@ -2,6 +2,7 @@ body {
     background-color: black;
 }
 
+/* Input Form */
 .form {
     display: inline;
 }
@@ -24,10 +25,29 @@ body {
     font-size: 200%;
 }
 
+/* Embed */
+#twitch-video {
+    z-index: 1;
+}
+
 iframe {
     position: absolute;
     width: 100%;
     height: 90%;
     top: 10%;
     left: 0;
-  }
+}
+
+/* Responses */
+.text {
+    font-size: 10%;
+    color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+/*
+#responses {
+
+} */
