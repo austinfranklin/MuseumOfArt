@@ -10,6 +10,7 @@ window.addEventListener("load", function() {
             method: 'POST',
             body: data,
         })
+        createText();
     });
 });
 
@@ -20,6 +21,8 @@ window.addEventListener("load", function() {
 
 // used to create divs for new responses
 let responses;
+// used to stor individual texts and debug
+let text;
 // used to store all responses and prevent duplicates
 let allResponses = [];
 
@@ -38,30 +41,25 @@ Papa.parse(
     }
 );
 
-let responsesDiv = document.getElementById("responses");
+function createText(parse = responses) {
+    //let row = 0, col = 0;
+    console.log("Data: ", parse.data);
 
-function createText(responses) {
-    let row = 0, col = 0;
-    console.log("Data", responses.data);
-
-    for (responseNumber in responses.data) {
-        /*console.log ("live? ", responses.data[responseNumber].Live)
-        if (responses.data[responseNumber].Live === "TRUE") {
+    for (i in parse.data) {
+        /*console.log ("live? ", responses.data[i].Live)
+        if (responses.data[i].Live === "TRUE") {
             let colDiv = document.createElement("div");
             colDiv.classList.add("col");
         }; */
 
-        let text = responses.data[responseNumber];
-        console.log(text);
+        let text = parse.data[i];
+        //console.log(text);
 
         let textDiv = document.createElement("div");
         textDiv.classList.add("responses");
-        textDiv.innerText = responses["Responses"];
+        textDiv.innerText = text.Responses;
 
         let display = document.getElementById("responses");
         display.appendChild(textDiv);
-        
-        row = row++;
-        col = col++;
     };
 };

@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: whitesmoke;
 }
 
 /* Input Form */
@@ -25,10 +25,9 @@ body {
     font-size: 200%;
 }
 
-/* Embed */
+/* Embed
 #twitch-video {
-    z-index: 1;
-}
+} */
 
 iframe {
     position: absolute;
@@ -39,15 +38,17 @@ iframe {
 }
 
 /* Responses */
-.text {
-    font-size: 10%;
+#responses {
+    color: whitesmoke;
+    position: absolute;
+    margin-top: 0%;
+    top: 15%;
+    width: 100%;
+}
+
+.responses {
+    font-size: 100%;
     color: whitesmoke;
     width: 100%;
     height: 100%;
-    z-index: 9;
 }
-
-/*
-#responses {
-
-} */
