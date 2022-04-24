@@ -10,7 +10,21 @@ window.addEventListener("load", function() {
             method: 'POST',
             body: data,
         })
-        createText();
+        //createText();
+
+        Papa.parse(
+            "https://docs.google.com/spreadsheets/d/1dMEF1bC9AuGRLN34wEfA6pBxsRev8cBJyUI-_5ZiDf4/pub?output=csv",
+            {
+                download: true,
+                header: true,
+                //worker: true,
+                complete: (results) => {
+                    console.log(results);
+                    responses = results;
+                    createText();
+                }
+            }
+        );
     });
 });
 
@@ -25,20 +39,6 @@ let responses;
 let text;
 // used to store all responses and prevent duplicates
 let allResponses = [];
-
-Papa.parse(
-    "https://docs.google.com/spreadsheets/d/1dMEF1bC9AuGRLN34wEfA6pBxsRev8cBJyUI-_5ZiDf4/pub?output=csv",
-    {
-        download: true,
-        header: true,
-        //worker: true,
-        complete: (results) => {
-            console.log(results);
-            responses = results;
-            createText();
-        }
-    }
-);
 
 function createText(parse = responses) {
     //let row = 0, col = 0;
