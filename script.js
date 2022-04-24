@@ -64,7 +64,7 @@ function createText(parse = responses) {
             display.appendChild(textDiv);
 
         } else {
-            allResponses.splice(i, 1);
+            //allResponses.splice(i, 1);
         }
     };
 };
