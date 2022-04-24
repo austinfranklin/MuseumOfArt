@@ -1,5 +1,7 @@
 
 // code for posting responses to Google Sheet
+let button = document.getElementById('submit');
+
 window.addEventListener("load", function() {
     const form = document.getElementById('text-input');
     form.addEventListener('submit', function(e) {
@@ -10,16 +12,14 @@ window.addEventListener("load", function() {
             method: 'POST',
             body: data,
         });
+        // clears text box after submitting something
+        let input = document.getElementById('input');
+        input.value = '';
+
+        createText();
     });
 });
 
-// clears text box after submitting something
-let button = document.getElementById('submit');
-button.addEventListener('click', (e) => {
-    e.preventDefault();
-    let input = document.getElementById('input');
-    input.value = '';
-});
 
 // code for retreiving and displaying responses
 // Spreadsheet for testing
@@ -35,22 +35,30 @@ let text;
 let allResponses = [];
 let animate = [];
 
-setInterval(Papa.parse(
+// variable to store papa parse doing its thing
+let papa;
+// start when window finishes loading
+window.addEventListener("load", autoLoad());
+
+// function that downloads csv and reloads every 5 seconds
+function autoLoad() {
+    papa = setInterval(Papa.parse(
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vRbATeczAPZBiWkuoTX7p-2IIg012MwAyHQx1Dno8fcqV3nZct8tYIf5I_VgNjILvfToO6rXyYlkADN/pub?output=csv",
     {
         download: true,
         header: true,
         fastMode: true,
-        //skipEmptyLines: true,
+        skipEmptyLines: true,
+        delimiter: '',
         //worker: true,
         complete: (results) => {
-            console.log(results);
+            console.log(results); // why no print?
             responses = results;
         }
     }
-), 50); // refreshes every 500 ms
+), 5000)};
 
-setInterval(function createText(parse = responses) {
+function createText(parse = responses) {
     
     console.log("Data: ", parse.data);
 
@@ -78,11 +86,8 @@ setInterval(function createText(parse = responses) {
             allResponses.splice(i, 1);
         }
     };
-}, 500); // Adds new text every 500 ms
+};
 
 function checkIfDuplicateExists(arr) {
     return new Set(arr).size !== arr.length;
 }
-
-let textPos;
-let speed;
