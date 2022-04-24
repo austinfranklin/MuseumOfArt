@@ -56,7 +56,7 @@ function createText(parse = responses) {
         //console.log(text);
         allResponses.push(text.Responses);
 
-        //if (checkIfDuplicateExists(allResponses) == false) {
+        if (checkIfDuplicateExists(allResponses) == false) {
             let textDiv = document.createElement("div");
             textDiv.classList.add("responses");
             textDiv.innerText = text.Responses;
@@ -64,9 +64,9 @@ function createText(parse = responses) {
             let display = document.getElementById("responses");
             display.appendChild(textDiv);
 
-        //} else {
-            //allResponses.splice(i, 1);
-       // }
+        } else {
+            allResponses.splice(i, 1);
+        }
     };
 };
 
