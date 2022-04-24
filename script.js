@@ -10,8 +10,8 @@ window.addEventListener("load", function() {
             method: 'POST',
             body: data,
         })
-        createText();
     });
+    createText();
 });
 
 // code for retreiving and displaying responses
@@ -63,7 +63,6 @@ function createText(parse = responses) {
 
             let display = document.getElementById("responses");
             display.appendChild(textDiv);
-
         } else {
             allResponses.splice(i, 1);
         }
