@@ -21,6 +21,7 @@ window.addEventListener("load", function() {
 
 // used to create divs for new responses
 let responses;
+let parse;
 // used to store individual texts and debug
 let text;
 // used to store all responses and prevent duplicates
