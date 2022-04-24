@@ -21,7 +21,7 @@ window.addEventListener("load", function() {
 
 // used to create divs for new responses
 let responses;
-// used to stor individual texts and debug
+// used to store individual texts and debug
 let text;
 // used to store all responses and prevent duplicates
 let allResponses = [];
@@ -35,7 +35,6 @@ Papa.parse(
         complete: (results) => {
             console.log(results);
             responses = results;
-            allResponses.push(results);
             createText();
         }
     }
@@ -54,12 +53,22 @@ function createText(parse = responses) {
 
         let text = parse.data[i];
         //console.log(text);
+        allResponses.push(text.Responses);
 
-        let textDiv = document.createElement("div");
-        textDiv.classList.add("responses");
-        textDiv.innerText = text.Responses;
+        if (checkIfDuplicateExists(allResponses) == false) {
+            let textDiv = document.createElement("div");
+            textDiv.classList.add("responses");
+            textDiv.innerText = text.Responses;
 
-        let display = document.getElementById("responses");
-        display.appendChild(textDiv);
+            let display = document.getElementById("responses");
+            display.appendChild(textDiv);
+
+        } else {
+            allResponses.splice(i, 1);
+        }
     };
 };
+
+function checkIfDuplicateExists(arr) {
+    return new Set(arr).size !== arr.length;
+}
