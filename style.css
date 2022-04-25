@@ -1,6 +1,7 @@
 /* GLOBAL STYLES */
 body {
     background-color: black;
+    font-family: 'Josefin Slab', serif;
     overflow: hidden;
 }
 
@@ -17,12 +18,14 @@ body {
 }
 
 #input {   
+    font-family: 'Josefin Slab', serif;
     width: 79%;
     padding: 0%;
     font-size: 200%;
 }
 
 #submit {  
+    font-family: 'Josefin Slab', serif;
     padding: 0%; 
     width: 20%;
     font-size: 200%;
@@ -42,7 +45,6 @@ iframe {
 
 /* Styling */
 #responses {
-    font-family: 'Special Elite', cursive;
     color: dimgray;
     position: absolute;
     margin-top: 0%;
