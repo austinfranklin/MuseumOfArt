@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'nimbus_monoregular_oblique';
+    src: url('nimbusmono-oblique-webfont.eot');
+    src: url('nimbusmono-oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('nimbusmono-oblique-webfont.woff2') format('woff2'),
+         url('nimbusmono-oblique-webfont.woff') format('woff'),
+         url('nimbusmono-oblique-webfont.ttf') format('truetype'),
+         url('nimbusmono-oblique-webfont.svg#nimbus_monoregular_oblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

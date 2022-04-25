@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'nimbus_monoregular';
+    src: url('nimbusmono-regular-webfont.eot');
+    src: url('nimbusmono-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('nimbusmono-regular-webfont.woff2') format('woff2'),
+         url('nimbusmono-regular-webfont.woff') format('woff'),
+         url('nimbusmono-regular-webfont.ttf') format('truetype'),
+         url('nimbusmono-regular-webfont.svg#nimbus_monoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
