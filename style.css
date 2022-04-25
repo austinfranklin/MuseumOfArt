@@ -1,13 +1,6 @@
 /* GLOBAL STYLES */
-
-@font-face {
-    font-family: Nimbus;
-    src: url("path/GraublauWeb.otf") format("opentype");
-}
-
 body {
     background-color: black;
-    font-family: 'Nimbus';
     overflow: hidden;
 }
 
