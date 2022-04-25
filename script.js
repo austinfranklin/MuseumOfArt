@@ -1,5 +1,5 @@
 
-// code for posting responses to Google Sheet
+// code for posting responses to Google Sheet with Fetch
 let button = document.getElementById('submit');
 
 window.addEventListener("load", function() {
@@ -19,6 +19,7 @@ window.addEventListener("load", function() {
         createText();
     });
 });
+
 
 
 // code for retreiving and displaying responses
