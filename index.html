@@ -5,9 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="HandheldFriendly" content="true">
 	
+	<link href="http://fonts.cdnfonts.com/css/nimbus-mono" rel="stylesheet">
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+		@import url('http://fonts.cdnfonts.com/css/nimbus-mono');
 	</style>
+
 	<link rel="stylesheet" href="./style.css">
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
@@ -33,7 +35,7 @@
 
 		<!-- Create a Twitch.Player object. This will render within the placeholder div -->
 		<script type="text/javascript">
-			new Twitch.Player("twitch-embed", {
+			new Twitch.Player("twitch-embed", { // change new Twitch.Player to Twitch.Embed for adding Twitch chat, will need to scrap google sheet retreiving code if used
 				channel: "austinfranklinmusic"
 		});
 		</script>

@@ -1,6 +1,14 @@
 /* GLOBAL STYLES */
+
+@font-face {
+    font-family: Nimbus;
+    src: url("path/GraublauWeb.otf") format("opentype");
+}
+
 body {
-    background-color: whitesmoke;
+    background-color: black;
+    font-family: 'Nimbus';
+    overflow: hidden;
 }
 
 /* Input Form */
@@ -9,6 +17,7 @@ body {
 }
 
 #text-input {
+    padding: 10px;
     width: 80%;
     height: 15%;
     margin-left: 10%;
