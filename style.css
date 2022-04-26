@@ -19,11 +19,11 @@ body {
 }
 
 #text-input {
-    width: 80vh !important;
+    width: 60vh !important;
     margin-top: 0.125%;
     padding: 10px;
     height: 5%;
-    margin-left: 10%;
+    margin-left: 0%;
 }
 
 #input {   
