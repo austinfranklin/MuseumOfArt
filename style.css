@@ -29,14 +29,14 @@ body {
     font-family: 'Josefin Slab', serif;
     width: 79%;
     padding: 0%;
-    font-size: 200%;
+    font-size: 100%;
 }
 
 #submit {  
     font-family: 'Josefin Slab', serif;
     padding: 0%; 
     width: 20%;
-    font-size: 200%;
+    font-size: 100%;
 }
 
 /* Embed */
