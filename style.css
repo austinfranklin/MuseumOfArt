@@ -13,6 +13,7 @@ body {
 
 /* Input Form */
 .form {
+    width: 100vh !important;
     display: inline;
     position: absolute;
     z-index: 10;
