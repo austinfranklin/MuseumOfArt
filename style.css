@@ -17,20 +17,20 @@ body {
     display: inline;
     position: absolute;
     z-index: 10;
-    width: 90%;
+    width: 100%;
 }
 
 #text-input {
-    width: 60vh !important;
+    width: 55vh !important;
     margin-top: 0.125%;
     padding: 10px;
-    height: 5%;
+    height: 8%;
     margin-left: 0%;
 }
 
 #input {   
     font-family: 'Josefin Slab', serif;
-    width: 79%;
+    width: 70%;
     padding: 0%;
     font-size: 100%;
 }
