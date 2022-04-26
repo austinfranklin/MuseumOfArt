@@ -16,7 +16,7 @@ window.addEventListener("load", function() {
         let input = document.getElementById('input');
         input.value = '';
     });
-    setInterval(() => getResponses(), 5000);
+    setInterval(() => getResponses(), 2500);
 });
 
 
@@ -79,9 +79,7 @@ function createText(parse = responses) {
             display.appendChild(textDiv);
             resArray.push(textDiv);
 
-            let form = document.getElementById('text-input');
-            form.scrollIntoView({behavior:"smooth"});
-            textDiv.scrollIntoView({behavior:"smooth"});
+            //textDiv.scrollIntoView({behavior:"smooth"});
 
             /*
             if (text.Live === "False" || "false" || "FALSE") {

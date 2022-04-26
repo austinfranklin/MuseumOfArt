@@ -1,13 +1,9 @@
 /* GLOBAL STYLES */
-html {
-    min-height: calc(var(--vh, 1vh) * 100);
-	min-width: calc(var(--vh2, 1vh) * 100);
-}
-
 body {
     background-color: black;
     font-family: 'Josefin Slab', serif;
     overflow: hidden;
+    height: 100vh !important;
 }
 
 /* Input Form */
@@ -20,7 +16,7 @@ body {
     margin-top: 0.125%;
     padding: 10px;
     width: 80%;
-    height: 15%;
+    height: 5%;
     margin-left: 10%;
 }
 
@@ -64,7 +60,7 @@ iframe {
     top: 2%;
     margin-left: 1%;
     width: 98%;
-    padding-bottom: 12%;
+    padding-bottom: 10%;
     overflow: hidden;
 }
 
