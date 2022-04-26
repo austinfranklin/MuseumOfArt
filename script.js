@@ -79,7 +79,9 @@ function createText(parse = responses) {
             display.appendChild(textDiv);
             resArray.push(textDiv);
 
-            display.scrollIntoView({behavior:"smooth"});
+            let form = document.getElementById('text-input');
+            form.scrollIntoView({behavior:"smooth"});
+            textDiv.scrollIntoView({behavior:"smooth"});
 
             /*
             if (text.Live === "False" || "false" || "FALSE") {
