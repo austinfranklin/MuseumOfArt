@@ -1,4 +1,9 @@
 /* GLOBAL STYLES */
+html {
+    min-height: calc(var(--vh, 1vh) * 100);
+	min-width: calc(var(--vh2, 1vh) * 100);
+}
+
 body {
     background-color: black;
     font-family: 'Josefin Slab', serif;
@@ -8,6 +13,7 @@ body {
 /* Input Form */
 .form {
     display: inline;
+    position: absolute;
 }
 
 #text-input {
@@ -44,18 +50,66 @@ iframe {
 }
 
 /* Styling */
+#container {
+    position: absolute;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-bottom: 5%;
+}
+
 #responses {
     color: dimgray;
     position: absolute;
     margin-top: 0%;
-    top: 15%;
-    margin-left: 65%;
-    width: 35%;
+    top: 2%;
+    margin-left: 1%;
+    width: 98%;
+    padding-bottom: 12%;
+    overflow: hidden;
 }
 
 .responses {
-    font-size: 100%;
+    font-size: 125%;
     color: dimgray;
+    text-shadow: whitesmoke;
     width: 100%;
     height: 100%;
+    padding: 0.5%;
+    vertical-align: bottom;
+    position: relative;
+
+    /*overflow: hidden;  Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+  
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:100%; }
+    #secondary { width: 100%; margin:0; border:none;} 
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width: 100%; margin:0; border:none; }
 }

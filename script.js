@@ -16,7 +16,6 @@ window.addEventListener("load", function() {
         let input = document.getElementById('input');
         input.value = '';
     });
-    setInterval(() => createText(), 5000);
     setInterval(() => getResponses(), 5000);
 });
 
@@ -34,29 +33,14 @@ let parse;
 let text;
 // used to store all responses and prevent duplicates
 let allResponses = [];
-let animate = [];
+let unique;
+// array for divs
+let resArray = [];
 
 // start when window finishes loading
 window.addEventListener("load", autoLoad());
 
 // function that downloads csv
-/*
-function autoLoad() {
-    Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vRbATeczAPZBiWkuoTX7p-2IIg012MwAyHQx1Dno8fcqV3nZct8tYIf5I_VgNjILvfToO6rXyYlkADN/pub?output=csv",
-    {   
-        download: true,
-        header: true,
-        fastMode: true,
-        skipEmptyLines: true,
-        delimiter: "",
-        //worker: true,
-        complete: (results) => {
-            console.log("From Papa " + results);
-            responses = results;
-        }
-    }
-)}; */
-
 function getResponses() {
     Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vRbATeczAPZBiWkuoTX7p-2IIg012MwAyHQx1Dno8fcqV3nZct8tYIf5I_VgNjILvfToO6rXyYlkADN/pub?output=csv",
     {   
@@ -68,41 +52,40 @@ function getResponses() {
         //worker: true,
         complete: (results) => {
             responses = results;
-            console.log("From Papa " + results);
+            console.log(responses);
+            createText();
         }
     });
 }
 
 function createText(parse = responses) {
-
-    console.log("Data: ", parse.data);
+    //console.log("data: ", parse.data);
 
     for (i in parse.data) {
-        /*console.log ("live? ", responses.data[i].Live)
-        if (responses.data[i].Live === "TRUE") {
-            let colDiv = document.createElement("div");
-            colDiv.classList.add("col");
-        }; */
+        //console.log ("live? ", parse.data[i].Live)
 
         let text = parse.data[i];
-        //console.log(text);
-        allResponses.push(text.Responses);
 
-        if (checkIfDuplicateExists(allResponses) == false) {
+        if (allResponses.includes(text.Responses)) {
+
+        } else {
+            allResponses.push(text.Responses);
+            // div for displaying text
             let textDiv = document.createElement("div");
             textDiv.classList.add("responses");
             textDiv.innerText = text.Responses;
 
             let display = document.getElementById("responses");
             display.appendChild(textDiv);
-        } else if (responses == false) {
-            allResponses = [];
-        } else {
-            allResponses.splice(i, 1);
+            resArray.push(textDiv);
+
+            display.scrollIntoView({behavior:"smooth"});
+
+            /*
+            if (text.Live === "False" || "false" || "FALSE") {
+                let display = document.getElementById('div');
+                display.removeChild(text.Responses);
+            } */
         }
     }
-}
-
-function checkIfDuplicateExists(arr) {
-    return new Set(arr).size !== arr.length;
 }
