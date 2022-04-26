@@ -1,4 +1,9 @@
 /* GLOBAL STYLES */
+html {
+    min-height: calc(var(--vh, 1vh) * 100);
+	min-width: calc(var(--vh2, 1vh) * 100);
+}
+
 body {
     background-color: black;
     font-family: 'Josefin Slab', serif;
