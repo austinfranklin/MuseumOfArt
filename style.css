@@ -17,6 +17,7 @@ body {
     display: inline;
     position: absolute;
     z-index: 10;
+    width: 90%;
 }
 
 #text-input {
