@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
 	<span style='overflow:hidden; white-space: nowrap;'>
 		<form id="text-input"
   			method="POST" 
@@ -34,7 +35,8 @@
 		<!-- Create a Twitch.Player object. This will render within the placeholder div -->
 		<script type="text/javascript">
 			new Twitch.Player("twitch-embed", { // change new Twitch.Player to Twitch.Embed for adding Twitch chat, will need to scrap google sheet retreiving code if used
-				channel: "austinfranklinmusic"
+				channel: "austinfranklinmusic",
+				muted: false
 		});
 		</script>
 	</span>

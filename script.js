@@ -71,7 +71,7 @@ function createText(parse = responses) {
             if (text.Live === "FALSE") {
                 //let remove = document.getElementById('div' + `${text.Responses}`);
                 //remove.removeChild('div' + `${text.Responses}`);
-                resArray[i].innerText = 'Happy Thoughts';
+                resArray[i].innerText = '';
             }
 
         } else {
