@@ -9,6 +9,7 @@ body {
     font-family: 'Josefin Slab', serif;
     overflow: hidden;
     height: 100vh !important;
+    width: 100vh !important;
 }
 
 /* Input Form */
@@ -19,7 +20,7 @@ body {
 }
 
 #text-input {
-    width: 50vh !important;
+    width: 60vh !important;
     margin-top: 0.125%;
     padding: 10px;
     height: 5%;
