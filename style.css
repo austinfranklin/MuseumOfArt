@@ -14,7 +14,7 @@ body {
 /* Input Form */
 .form {
     display: inline;
-    position: absolute;
+    position: relative;
     z-index: 10;
 }
 
