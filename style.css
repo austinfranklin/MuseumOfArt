@@ -15,6 +15,7 @@ body {
 .form {
     display: inline;
     position: absolute;
+    z-index: 10;
 }
 
 #text-input {
