@@ -64,14 +64,20 @@ function createText(parse = responses) {
     for (i in parse.data) {
         //console.log ("live? ", parse.data[i].Live)
 
-        let text = parse.data[i];
+        text = parse.data[i];
 
         if (allResponses.includes(text.Responses)) {
+
+            if (text.Live === "FALSE") {
+                //let remove = document.getElementById('div' + `${text.Responses}`);
+                //remove.removeChild('div' + `${text.Responses}`);
+                resArray[i].innerText = 'Happy Thoughts';
+            }
 
         } else {
             allResponses.push(text.Responses);
             // div for displaying text
-            let textDiv = document.createElement("div");
+            let textDiv = document.createElement('div');
             textDiv.classList.add("responses");
             textDiv.innerText = text.Responses;
 
@@ -80,12 +86,6 @@ function createText(parse = responses) {
             resArray.push(textDiv);
 
             //textDiv.scrollIntoView({behavior:"smooth"});
-
-            /*
-            if (text.Live === "False" || "false" || "FALSE") {
-                let display = document.getElementById('div');
-                display.removeChild(text.Responses);
-            } */
         }
     }
 }
