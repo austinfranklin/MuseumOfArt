@@ -13,16 +13,15 @@ body {
 
 /* Input Form */
 .form {
-    width: 100vh !important;
     display: inline;
     position: absolute;
     z-index: 10;
 }
 
 #text-input {
+    width: 80vh !important;
     margin-top: 0.125%;
     padding: 10px;
-    width: 80%;
     height: 5%;
     margin-left: 10%;
 }
